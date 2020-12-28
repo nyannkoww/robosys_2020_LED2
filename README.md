@@ -29,8 +29,10 @@ pinコードはGPIO25とGNDを使用しています。
    2秒光らせたいとき
    $ echo 2　> /dev/myled0
    ```
+   ```
    8秒光らせたいとき
-    $ echo 8　> /dev/myled0
+   $ echo 8　> /dev/myled0
+   ```
 4. 後始末
    ```
    $ sudo rm /dev/myled0
