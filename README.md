@@ -6,7 +6,7 @@
 - 例）3を設定するとLEDが3秒光った後に一回消えてもう3秒光るということ。
 - pinコードはGPIO25とGNDを使用しています。
 ## 動画
-- URL − 
+- URL − https://youtu.be/Z1V3598C7Ng
 ## 使用するもの
 - Raspberry Pi 4 Model B
   - ubuntu 18.04 LTS
