@@ -25,12 +25,12 @@ pinコードはGPIO25とGNDを使用しています。
    $ sudo chmod 666 /dev/myled0
    ```
 3. 秒数の設定(「echo」の後の数字で秒数が変わる）    
-   ```
    2秒光らせたいとき
+   ```
    $ echo 2　> /dev/myled0
    ```
-   ```
    8秒光らせたいとき
+   ```
    $ echo 8　> /dev/myled0
    ```
 4. 後始末
