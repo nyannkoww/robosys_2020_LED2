@@ -25,22 +25,20 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	if(copy_from_user(&c,buf,sizeof(char)))
 	   return -EFAULT;
 					
-	if(c && c != '\n'){
-	   if(0 <= (int) c - (int) '0' && (int) c - (int) '0' <= 9){
-	      for(a=0; a<2; a++){
-	       gpio_base[7] = 1 << 25;
-               mdelay(((int) c - (int) '0') * 1000);
-	       gpio_base[10] = 1 << 25;
-	       mdelay(500);
-	      }
-	   }
-	   else{
-	        gpio_base[7] = 1 << 25;
+		if(c && c != '\n'){
+	  	 	if(0 <= (int) c - (int) '0' && (int) c - (int) '0' <= 9){
+	     			for(a=0; a<2; a++){
+	       			gpio_base[7] = 1 << 25;
+               			mdelay(((int) c - (int) '0') * 1000);
+	       			gpio_base[10] = 1 << 25;
+	       			mdelay(500);
+	      			}
+	   		}
+	  else{
+	   	gpio_base[7] = 1 << 25;
 	        mdelay(1000);
-	   }
-	} 
-					            
-
+	  }
+	}
 	printk(KERN_INFO "recive:%c\n",c);
 	gpio_base[10] = 1 << 25;
 	return 1;
